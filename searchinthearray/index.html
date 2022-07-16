@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching in the Array</title>
+</head>
+<body>
+    <input type="text" placeholder="SEARCH FOR" id="item">
+    <input type="button" value="SEARCH" id="search">
+    <div id="array-list"></div>
+    <script>
+    var array=["Merve","Ayse","Can","Ali"];
+    var arrayList=document.getElementById("array-list");
+    var item=document.getElementById("item");
+    var search=document.getElementById("search");
+    
+    
+    window.onload=function(){
+    
+    arrayList.innerHTML=array; 
+    }
+    
+    search.onclick=function(){
+    
+    var location= array.lastIndexOf(item.value);
+    if(location>=0)
+    {
+    alert("The item you are looking for is in the "+(location+1)+". place in this array.");
+    }
+    else
+    {
+    alert("The item you are looking for not found in this array.");
+    }
+    
+    }
+    </script>
+</body>
+</html>
